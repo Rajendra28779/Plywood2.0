@@ -387,6 +387,7 @@ p {
    background-size: cover; /* Ensures the image covers the entire container */
    overflow: hidden; /* Ensures no scroll bars appear */
 }
+
 .testmonal-row {
   margin-left: 12ch;
   margin-right: 6ch;
@@ -415,6 +416,9 @@ p {
 
 /* Mobile adjustment */
 @media only screen and (max-width: 768px) {
+  .testmonal {
+    height: 100%;
+  }
   .static-text {
     font-size: 18px;
     margin-right: 10px;
@@ -905,7 +909,7 @@ p {
       </div>
     </div>
   
-    <div class="row" style="position: relative;">
+    <div class="row" >
       <div class="testmonal" >
         <div class="row testmonal-row">
           <div class="col-lg-4 col-md-12 col-sm-12">

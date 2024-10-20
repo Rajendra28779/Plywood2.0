@@ -113,6 +113,13 @@ h1, .lead {
    overflow: hidden; /* Ensures no scroll bars appear */
 }
 
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .footer {
+  height: 100%;
+  }
+}
+
 .foottext h4{
  font-size: 25px;
  color: white;
