@@ -118,6 +118,11 @@ h1, .lead {
   .footer {
   height: 100%;
   }
+
+  .about1st{
+    margin-left: 3ch;
+    margin-right: 3ch;
+  }
 }
 
 .foottext h4{
