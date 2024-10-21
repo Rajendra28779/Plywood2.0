@@ -519,6 +519,7 @@ p {
   .testimon-card span {
     font-size: 0.875rem;
   }
+
 }
 
 @media (max-width: 576px) {
@@ -611,6 +612,31 @@ p {
     opacity: 0;
   }
 }
+
+.rotating-image {
+            height: 15ch; 
+            width: 15ch; 
+            margin-top: -15ch;
+            animation: rotate 5s linear infinite; /* 5s for one full rotation */
+        }
+
+        /* Keyframes to define the rotation */
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg); /* Start at 0 degrees */
+            }
+            100% {
+                transform: rotate(360deg); /* Full rotation at 360 degrees */
+            }
+        }
+  @media (max-width: 768px) {
+    .rotating-image {
+            height: 15ch; 
+            width: 15ch; 
+            margin-top: 0ch;
+            animation: rotate 5s linear infinite; /* 5s for one full rotation */
+        }
+  }
   </style>
 
 </head>
@@ -701,8 +727,9 @@ p {
             <p style="color: white;   margin-right: 4ch;">Quality products for your construction needs .</p>
           </div>
           <div class="col-5"></div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="stat-banner">
+          <div class="col-lg-3 col-md-6 col-sm-12" style="text-align:center ;">
+            <img src="assets/images/rotateimage.png" alt="Logo" class="rotating-image" >
+            <div class="stat-banner">              
               <div class="row">
                 <div class="col-5">
                   <h3>500+</h3>
