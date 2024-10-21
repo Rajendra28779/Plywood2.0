@@ -57,3 +57,5 @@ fetch('heading.html')
     document.querySelector('#page-heading').innerHTML = newHeading;
   })
   .catch(error => console.error('Error loading the heading:', error));
+
+  

@@ -33,8 +33,19 @@ h1, .lead {
   
 }
 
+.nav-item .btn{
+  background-color: #4d3214;
+  color: white;
+  width: 120px;
+  border-radius: 5px;
+}
+
+.nav-item .btn :hover{
+  background-color: #805728;
+}
+
 .nav-link{
-  color: rgb(107, 98, 88);
+  color: #4d3214;
 }
 
 .s1sttab{
@@ -104,7 +115,7 @@ h1, .lead {
 /* Footer */
 
 .footer {
-  background: url('../images/21337763_6464280.jpg') no-repeat center center/cover;
+  background: url('../images/1000004748.png') no-repeat center center/cover;
    backdrop-filter: blur(2px);
    width: 100vw; /* Full viewport width */
    height: 45ch; /* Full viewport height */
@@ -128,6 +139,8 @@ h1, .lead {
 .foottext h4{
  font-size: 25px;
  color: white;
+ font-family: 'Playfair Display', serif;
+ margin-bottom: 20px;
 }
 .foottext p{
  font-weight: 500;

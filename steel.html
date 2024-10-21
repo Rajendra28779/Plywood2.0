@@ -18,9 +18,7 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!--
-
--->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -131,7 +129,7 @@
   font-size: 45px;
   color: black;
   font-weight: 600;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .button-container {
@@ -182,7 +180,7 @@
 }
 
 .content h4{
-  font-family: 'Times New Roman', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 40px;
   justify-content: center;
   font-weight: 600;
@@ -194,11 +192,90 @@
   justify-content: center;
   font-weight: 400;
 }
+
+.mapdata {
+  margin: 6ch;
+ }
+
+ .mapdata h4{
+  font-size: 40px;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;  
+  margin-left: 2ch;
+ }
+
+ .mapdata p{
+  font-size: 17px;
+  color: rgb(87, 87, 87);
+  margin-left: 7ch;
+  margin-top: 2ch;
+ justify-items: center;
+ }
+
+ .accordion {
+    max-width: 650px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+}
+
+.accordion-item label{
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif; 
+}
+
+.accordion-header {
+    display: block;
+    padding: 10px;
+    background-color: #FFFBEE;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: left;
+    position: relative;
+}
+
+.accordion-header span {
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #F5F0E1;
+    border: 1px solid #F5F0E1;
+    border-radius: 5px;
+}
+
+.accordion-content p {
+    padding: 5px 7px 15px 15px ;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Expand content when checked */
+input[type="radio"]:checked + label + .accordion-content {
+    max-height: 100px; /* Adjust based on content height */
+}
+
+/* Rotate arrow when content is open */
+input[type="radio"]:checked + label span {
+    transform: rotate(180deg);
+}
   </style>
 
 </head>
 
-<body>
+<body style="background-color: #FFFBEE;">
 
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -214,7 +291,7 @@
   <!-- ***** Preloader End ***** -->
   <header id="page-heading">
       <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg" style="background-color: #fff3e4; border-bottom: 0.5px solid rgb(107, 104, 104);" >
+  <nav class="navbar navbar-expand-lg" style="background-color: #FFFBEE; border-bottom: 0.5px solid rgb(107, 104, 104);" >
     <div class="container-fluid d-flex justify-content-between">
       <!-- Logo and brand name on the left -->
       <a class="navbar-brand d-flex align-items-center" href="#">
@@ -259,7 +336,7 @@
   </header>
 
   <div>
-    <div class="topimg" style="background-image:url('assets/images/2148106905 crop.jpg') ; background-repeat: no-repeat; ">
+    <div class="topimg" style="background-image:url('assets/images/2148106905 crop.jpg') ; background-repeat: no-repeat; background-position: center; background-size: cover;">
       <h3>Steel Products</h3>
     </div>
   
@@ -431,6 +508,48 @@
   
       </div>
     </div>
+    <div class="row" style="margin-top: 10ch;">
+      <div class="col-lg-5 col-md-6 col-sm-12">
+        <div class="mapdata">
+          <h4>Frequently Asked</h4>
+          <h4 style="color: #4d3214;">Questions</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis sint veniam minus nihil nulla quo deserunt, esse velit explicabo ipsam!</p>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-6 col-sm-12">
+        <div class="accordion">
+          <div class="accordion-item">
+              <input type="radio" id="question1" name="accordion" checked>
+              <label for="question1" class="accordion-header">Question 1 <span>&#9660;</span></label>
+              <div class="accordion-content">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat optio beatae rerum labore dicta laboriosam ipsam cupiditate, repellendus hic nostrum voluptate odio. Inventore aliquid molestias ipsa facilis consequatur iusto minus reprehenderit accusantium, aperiam quia deleniti minima officiis modi suscipit enim soluta id architecto eaque. Distinctio quidem eum aliquid vitae laborum?</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <input type="radio" id="question2" name="accordion">
+              <label for="question2" class="accordion-header">Question 2 <span>&#9660;</span></label>
+              <div class="accordion-content">
+                  <p>This is the answer to question 2.</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <input type="radio" id="question3" name="accordion">
+              <label for="question3" class="accordion-header">Question 3 <span>&#9660;</span></label>
+              <div class="accordion-content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, perferendis, officiis earum molestias nobis optio quos nulla aut odio, laboriosam itaque enim quisquam. Alias officia voluptatum obcaecati quis ad? Obcaecati soluta sit illo optio ut tenetur beatae magni delectus nisi molestias minima unde voluptate consequatur qui recusandae, omnis consectetur velit doloribus maiores minus. Eligendi voluptates totam ex explicabo quas quam commodi illum voluptatibus, excepturi pariatur id eaque exercitationem quod distinctio eum deserunt voluptatum similique necessitatibus esse enim quisquam qui ab saepe repellendus. Incidunt reprehenderit iste inventore fugiat dicta cumque, optio voluptate! Eius sit laboriosam iusto placeat, aliquam ratione asperiores a.</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <input type="radio" id="question4" name="accordion">
+              <label for="question4" class="accordion-header">Question 4 <span>&#9660;</span></label>
+              <div class="accordion-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe aliquam ipsa ullam qui voluptatem, temporibus incidunt quis numquam? Fugiat, nostrum incidunt! Excepturi animi, asperiores dolore iusto ullam voluptatum maxime recusandae officia porro voluptatibus facilis reiciendis quaerat quibusdam optio eaque beatae, accusantium dolor nemo tempore facere dolorem repellendus! Ea similique, harum vitae iste odit vero animi facere, hic ipsum iure odio cupiditate exercitationem nihil laudantium eius sapiente commodi praesentium nulla. Perspiciatis vitae excepturi maxime sit ullam impedit, id perferendis vero quod aliquam! Atque qui vitae architecto, delectus a sed quia, laborum consequuntur quis molestias itaque repellat quibusdam ducimus! Repudiandae sequi, omnis, in facere sed exercitationem dolore vel quasi accusamus debitis ab, facilis vitae placeat aliquam! Veritatis dolor porro iste doloremque, deleniti aliquam dignissimos voluptatem sequi est minima. Harum iste facere quod, veritatis aperiam, laborum impedit possimus consectetur eum sunt, rem tempore. Facere, repellat. Voluptatum dolorem tenetur corrupti recusandae dolores cumque dolore ex quibusdam ducimus at rerum, debitis perferendis nulla voluptate error natus, ea magnam modi fuga nostrum consequuntur voluptatibus blanditiis. Iure earum consequuntur quaerat quasi voluptatum consequatur sit sed molestias exercitationem, provident, reiciendis numquam unde nisi fuga laborum suscipit saepe, laboriosam at nam repudiandae ex. Tempora dolor veritatis, atque ad minima voluptates nihil ipsum obcaecati omnis natus tempore doloribus id dignissimos voluptate quisquam architecto vel quo sit, labore in quidem culpa minus. Magni non nam nisi quam soluta voluptates in harum iusto distinctio doloremque ex impedit blanditiis enim repellat accusantium cupiditate rerum laborum illo suscipit quidem, voluptatum voluptas quis. Aliquam, praesentium dolore reiciendis qui pariatur voluptatum eligendi id, est repellendus repudiandae doloremque error aspernatur laborum. Sed, aliquam officia, est iste nobis corrupti repudiandae ad non explicabo ratione facere accusantium, atque laudantium fugit deleniti inventore! Debitis ipsa nemo quidem quos non ullam animi autem blanditiis voluptatibus cupiditate. Vel, necessitatibus. Quasi dolorum iusto reiciendis optio impedit nihil perferendis a! Sed quaerat, accusamus modi a est ipsa, dicta adipisci fugiat autem animi, pariatur eum consequatur iusto perferendis corrupti ducimus porro atque harum quis quos totam! Quibusdam sequi dignissimos omnis animi neque porro aut a voluptatum vitae maxime natus tempore sint, doloribus distinctio error. Saepe nemo voluptates neque odio quaerat perferendis commodi assumenda rem esse at reiciendis et cupiditate ducimus pariatur eveniet officia unde tempore, doloribus, amet nobis dolor inventore sequi nostrum! Id nostrum omnis commodi cumque sunt unde, accusantium reprehenderit exercitationem hic ipsum nobis itaque tempore ducimus et doloribus nisi quas mollitia fugiat voluptatum.</p>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
   </div>
   
 
