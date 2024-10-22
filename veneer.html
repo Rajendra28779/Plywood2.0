@@ -45,7 +45,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Fading black */
+  /* background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));  */
   z-index: 1;
 }
 
@@ -84,9 +84,6 @@
     margin-top: 1ch;
   }
 
-  .styled-button{
-    margin-top: 1ch;
-  }
 
   .custom-img1 {
     height: 40ch;
@@ -149,23 +146,6 @@
 .button-container {
   text-align: center;
   padding: 35px;
-}
-
-.styled-button {
-  padding: 10px 25px;
-  border: 1px solid #999897;
-  border-radius: 35px;
-  background: transparent;
-  cursor: pointer;
-  color: #6e6e6d;
-  transition: background-color 0.3s, color 0.3s;
-  font-weight: 500;
-  font-size: 20px;
-}
-.styled-button:hover {
-  /* background-color: #9b7037; */
-  border: 1px solid #9b7037;
-  color: #9b7037;
 }
 
 .selected {
@@ -286,7 +266,124 @@ input[type="radio"]:checked + label span {
     transform: rotate(180deg);
 }
 
+/* Mobile adjustment */
+@media only screen and (max-width: 768px) {
+  .static-text {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  .marquee-img {
+    width: 60px;
+    margin-right: 10px;
+  }
+  .scrolling-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
+
+/* schrolling */
+.scrolling-container {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Full width of the container */
+  border: 0,5px solid #ddd; /* Optional: Add a border */
+  border-radius: 0.5rem;
+  overflow: hidden; /* Hide the overflowed content */
+  box-sizing: border-box;
+  padding: 10px; /* Optional: Padding inside the container */
+  margin-top: 10ch;
+  margin-bottom: 5ch;
+}
+
+/* Add margin to the left side only on larger screens */
+@media (min-width: 992px) {
+  .scrolling-container {
+      margin-left: 12ch; /* Adjust this value as per your needs */
+      width: 88%;
+  }
+}
+
+.static-text {
+  font-weight: bold; /* Make the text bold */
+  color: rgb(128, 126, 126);
+  white-space: nowrap;
+  margin-right: 80px; /* Space between static and scrolling text */
+  font-size: 40px;
+}
+
+.scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1; /* Make scrolling text take up remaining space */
+  border-radius: 0.5rem;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-img {
+  width: 130px; /* Reduced size of images */
+  height: 60;
+  margin-right: 20px; /* Spacing between images */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    height: auto;
+    margin-top: 5ch;
+}
+
+.tab {
+    display: flex;
+}
+
+.heading-bar {
+    display: flex;
+    width: 80%;
+}
+
+.vertical-bar {
+    width: 6px;
+    height: 100%;
+    background-color: #b87d30; /* Change color as needed */
+    border-radius: 30px;
+    margin-right: 15px;
+}
+
+.heading-bar h2 {
+    font-size: 35px;
+    text-align: left;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif; 
+    margin-top: -1ch;
+}
+
+
+.desc {
+    padding: 20px;
+    width: 60%;
+}
+
+.desc p {
+    font-size: 18px;
+    font-weight: 400;
+    justify-content: center;
+}
   </style>
 
 </head>
@@ -352,21 +449,57 @@ input[type="radio"]:checked + label span {
   </header>
 
   <div >
-    <div class="topimg" style="background-image:url('assets/images/young-couple-choosing.jpg'); background-repeat: no-repeat;">
-      <h3>Plywood Dealership</h3>
+    <div class="topimg" style="background-image:url('assets/images/Frame 1171277231 veener.png'); background-repeat: no-repeat; background-position: center;">
     </div>
   
     <div class="about1st">
-      <div class="row content">
-        <div class="col-lg-4 col-md-3 col-sm-12 ">
-          <img src="assets/images/2150692407.jpg" alt="Interior Design" class=" custom-img1">
-        </div>
-        <div class="col-lg-8 col-md-9 col-sm-12">
-          <h4>Lasting Beauty: <span style="color:#b87d30;">Premium Plywood</span> for Exceptional Spaces</h4>
-          <p>At our plywood dealership, we offer a range of high-quality plywood crafted from premium hardwoods like teak, gurjan, and oak. Designed for durability and aesthetics, our plywood is ideal for furniture, interiors, and construction. Manufactured with advanced technology, each sheet ensures strength, stability, and elegance, enhancing your spaces with long-lasting beauty.</p>
+        <div class="container1">
+            <div class="tab">
+                <div class="heading-bar">
+                    <div class="vertical-bar"></div>
+                    <h2><span style="color:#b87d30; font-size: 12px; font-weight: 100;">W H Y C H O O S E U S</span><br>Transform Spaces with <br><span style="color:#b87d30;">Stunning Veneer Finishes</span></h2>
+                </div>
+                <div class="desc">
+                    <p>Beauty lies in the details. Our premium veneer surfaces, crafted from the finest wood layers, add a touch of natural elegance to your interiors. Perfect for furniture, walls, and cabinetry, these finishes combine the richness of wood with modern durability.</p>
+                </div>
+            </div>
+        </div> 
+  
+      <div class="text-center explore"> 
+        <div class=" mt-3" >
+          <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-6">
+                  <img src="assets/images/2150710647.jpg" alt="Interior Design" class=" custom-img">
+                </div>
+                <div class="col-6">
+                  <img src="assets/images/2151264420.jpg" alt="Interior Design" class=" custom-img">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <img src="assets/images/2151264397.jpg" alt="Interior Design" class=" custom-img">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <img src="assets/images/2150692219.jpg" alt="Interior Design" class=" custom-img">
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-6">
+                  <img src="assets/images/modern-minimalist-office.jpg" alt="Interior Design" class=" custom-img">
+                </div>
+                <div class="col-6">
+                  <img src="assets/images/2151780716.jpg" alt="Interior Design" class=" custom-img">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-  
+
       <div class="about-us-section" style="margin-top: 6ch;">
         <div class="row text-center">
           <div class="col-lg-3 col-md-6 col-sm-12">
@@ -387,137 +520,26 @@ input[type="radio"]:checked + label span {
           </div>
         </div>
       </div>
-  
-      <div class="text-center explore">
-        <p>Explore the Strength and Beauty of </p>
-        <p style="margin-top: -1ch;">Our Plywood Collection</p>
-  
-        <div class="button-container">
-          <button
-            class="styled-button me-3"
-            [ngClass]="{'selected': true}">
-            <i class="fa-solid fa-house me-2"></i>All
-          </button>
-  
-          <button
-            class="styled-button me-3"
-            [ngClass]="{'selected': true}">
-            <i class="fa-solid fa-award"></i> Best Saller
-          </button>
-  
-          <button
-            class="styled-button me-3"
-            [ngClass]="{'selected': true}">
-            <i class="fa-solid fa-gifts"></i> New
-          </button>
-  
-          <button
-            class="styled-button"
-            [ngClass]="{'selected': true}">
-            <i class="fa-solid fa-upload"></i> UpComming
-          </button>
-        </div>
-  
-        <div class=" mt-3" >
-          <div class="row">
-            <div class="col-lg-7 col-md-6 col-sm-12">
-              <div class="row">
-                <div class="col-6">
-                  <img src="assets/images/2150692407.jpg" alt="Interior Design" class=" custom-img">
-                </div>
-                <div class="col-6">
-                  <img src="assets/images/modern-minimalist-office.jpg" alt="Interior Design" class=" custom-img">
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5 col-md-6 col-sm-12">
-              <img src="assets/images/2151780716.jpg" alt="Interior Design" class=" custom-img">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-5 col-md-6 col-sm-12">
-              <img src="assets/images/2151780716.jpg" alt="Interior Design" class=" custom-img">
-            </div>
-            <div class="col-lg-7 col-md-6 col-sm-12">
-              <div class="row">
-                <div class="col-6">
-                  <img src="assets/images/2150692407.jpg" alt="Interior Design" class=" custom-img">
-                </div>
-                <div class="col-6">
-                  <img src="assets/images/modern-minimalist-office.jpg" alt="Interior Design" class=" custom-img">
-                </div>
-              </div>
-            </div>
+
+      <div class="scrolling-container">
+        <span class="static-text">
+          Dealers In
+        </span>
+        <div class="scrolling-text">
+          <div class="marquee-content">
+            <img src="assets/images/century.png" alt="Image 1" class="marquee-img">
+            <img src="assets/images/favi.png" alt="Image 2" class="marquee-img">
+            <img src="assets/images/merino.png" alt="Image 3" class="marquee-img">
+            <img src="assets/images/usg.png" alt="Image 4" class="marquee-img">
+            <img src="assets/images/hettich.png" alt="Image 4" style="width: 80px;margin-right: 20px;">
+            <img src="assets/images/jsl.png" alt="Image 4" class="marquee-img">
+            <img src="assets/images/godrej.png" alt="Image 4" class="marquee-img">
+            <img src="assets/images/sylvan.png" alt="Image 4" class="marquee-img">
+            <!-- Add more images as needed -->
           </div>
         </div>
-  
-        <div class=" mt-3" >
-          <div class="row">
-            <div class="col-lg-7 col-md-6 col-sm-12">
-              <div class="row">
-                <div class="col-6">
-                  <img src="assets/images/Frame 48096216.png" alt="Interior Design" class=" custom-img">
-                </div>
-                <div class="col-6">
-                  <img src="assets/images/Frame 4809621733.png" alt="Interior Design" class=" custom-img">
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5 col-md-6 col-sm-12">
-              <img src="assets/images/Frame 480962255.png" alt="Interior Design" class=" custom-img">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-5 col-md-6 col-sm-12">
-              <img src="assets/images/Frame 48096219.png" alt="Interior Design" class=" custom-img">
-            </div>
-            <div class="col-lg-7 col-md-6 col-sm-12">
-              <div class="row">
-                <div class="col-6">
-                  <img src="assets/images/steel.jpg" alt="Interior Design" class=" custom-img">
-                </div>
-                <div class="col-6">
-                  <img src="assets/images/Frame 48096216.png" alt="Interior Design" class=" custom-img">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class=" mt-3" >
-          <div class="row">
-            <div class="col-lg-7 col-md-6 col-sm-12">
-              <div class="row">
-                <div class="col-6">
-                  <img src="assets/images/hardware.jfif" alt="Interior Design" class=" custom-img">
-                </div>
-                <div class="col-6">
-                  <img src="assets/images/image 26.png" alt="Interior Design" class=" custom-img">
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5 col-md-6 col-sm-12">
-              <img src="assets/images/Frame 48096217.png" alt="Interior Design" class=" custom-img">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-5 col-md-6 col-sm-12">
-              <img src="assets/images/Frame 48096217.png" alt="Interior Design" class=" custom-img">
-            </div>
-            <div class="col-lg-7 col-md-6 col-sm-12">
-              <div class="row">
-                <div class="col-6">
-                  <img src="assets/images/Frame 48096218.png" alt="Interior Design" class=" custom-img">
-                </div>
-                <div class="col-6">
-                  <img src="assets/images/Hardware.png" alt="Interior Design" class=" custom-img">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-  
       </div>
+
     </div>
 
     <div class="row" style="margin-top: 10ch;">
