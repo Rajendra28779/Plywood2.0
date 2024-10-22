@@ -598,6 +598,21 @@ p {
 .slideshow-image:nth-child(8) {
   animation-delay: 33s;
 }
+.slideshow-image1{
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeEffect 10s infinite;
+}
+
+.slideshow-image1:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.slideshow-image1:nth-child(3) {
+  animation-delay: 5s;
+}
 
 @keyframes fadeEffect {
   0% {
@@ -621,7 +636,7 @@ p {
             height: 15ch; 
             width: 15ch; 
             margin-top: -15ch;
-            animation: rotate 5s linear infinite; /* 5s for one full rotation */
+            animation: rotate 10s linear infinite; /* 5s for one full rotation */
         }
 
         /* Keyframes to define the rotation */
@@ -674,11 +689,11 @@ p {
     <div class="container-fluid d-flex justify-content-between">
       <!-- Logo and brand name on the left -->
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="assets/images/logo.png" alt="Logo" class="logo" style="height: 50px; margin-right: 10px;"> <!-- Adjust the size of the logo -->
-        <div class="brand-text">
+        <img src="assets/images/logomain.png" alt="Logo" class="logo" style="height: 50px; margin-right: 10px;"> <!-- Adjust the size of the logo -->
+        <!-- <div class="brand-text">
           <div class="prehed-bold" style="font-weight: bold;">SAIKRISHNA</div>
           <div class="prehed-small">Plywood & Hardware</div>
-        </div>
+        </div> -->
       </a>
 
       <!-- Navbar toggle button for mobile view -->
@@ -971,8 +986,8 @@ p {
             </div>
           </div>
           <div class="col-lg-1"></div>
-          <div class="col-lg-7 col-md-12 col-sm-12">
-            <div class="testimon-card">
+          <div class="col-lg-7 col-md-12 col-sm-12 image-slideshow">
+            <div class="testimon-card slideshow-image1">
               <h4 style="font-size:2rem; color:rgb(248, 229, 58);">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -983,6 +998,18 @@ p {
                 I recently renovated my home and purchased all the plywood and aluminum materials from Sai Krishna Traders. The quality of their products is outstanding, and the prices are reasonable. The staff was helpful in guiding me to choose the right materials for my needs. I’m very happy with the results!
               </p>
               <span style="font-size: 1.5rem; font-family:bold; margin-top:2ch;">Chiranjib Dhal</span>
+                <span style="font-size: 4rem; text-align: right; display: inline-block; width: 100%; color: rgb(173, 105, 21);"><i class="fa-solid fa-quote-right"></i></span>
+            </div>
+            <div class="testimon-card slideshow-image1">
+              <h4 style="font-size:2rem; color:rgb(248, 229, 58);">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </h4>
+              <p style="text-align: justify; margin-top: 2ch;">
+                I recently renovated my home and purchased all the plywood and aluminum materials from Sai Krishna Traders. The quality of their products is outstanding, and the prices are reasonable. The staff was helpful in guiding me to choose the right materials for my needs. I’m very happy with the results!
+              </p>
+              <span style="font-size: 1.5rem; font-family:bold; margin-top:2ch;">Rajendra Prasad Sahoo</span>
                 <span style="font-size: 4rem; text-align: right; display: inline-block; width: 100%; color: rgb(173, 105, 21);"><i class="fa-solid fa-quote-right"></i></span>
             </div>
             <!-- <div id="testimonial-carousel">
@@ -1004,6 +1031,7 @@ p {
         <div class="about1st " style="margin-top: 8ch;">
           <div class="row foottext">
           <div class="col-lg-5 col-md-12 col-sm-12">
+            <img src="assets/images/logomain.png" alt="Logo" style="height: 60px; width: 70%; margin-bottom: 1ch;">
             <p>Established in 2011, Sai Krishna Traders is a leading supplier of high-quality building materials,
               including plywood, steel pipes, aluminum, and household hardware. Located in Bhadrak, Odisha,
               we are committed to providing durable and reliable products to meet all your construction needs.</p>

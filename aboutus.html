@@ -257,8 +257,29 @@ img {
   border-radius: 5px;
 }
 
+.rotating-image {
+            height: 15ch; 
+            width: 15ch; 
+            margin-top: -6ch;
+            margin-bottom: 1ch;
+            animation: rotate 15s linear infinite; /* 5s for one full rotation */
+        }
+
+        /* Keyframes to define the rotation */
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg); /* Start at 0 degrees */
+            }
+            100% {
+                transform: rotate(360deg); /* Full rotation at 360 degrees */
+            }
+        }
+
 
 @media (max-width: 768px) {
+  .rotating-image {
+    display: none;
+  }
   .topimg h3 {
     position: relative;
     z-index: 2; /* Ensure the text stays above the gradient */
@@ -394,11 +415,11 @@ img {
     <div class="container-fluid d-flex justify-content-between">
       <!-- Logo and brand name on the left -->
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="assets/images/logo.png" alt="Logo" class="logo" style="height: 50px; margin-right: 10px;"> <!-- Adjust the size of the logo -->
-        <div class="brand-text">
+        <img src="assets/images/logomain.png" alt="Logo" class="logo" style="height: 50px; width: 100%; margin-right: 10px;"> <!-- Adjust the size of the logo -->
+        <!-- <div class="brand-text">
           <div class="prehed-bold" style="font-weight: bold;">SAIKRISHNA</div>
           <div class="prehed-small">Plywood & Hardware</div>
-        </div>
+        </div> -->
       </a>
 
       <!-- Navbar toggle button for mobile view -->
@@ -469,7 +490,8 @@ img {
         <div class="col-lg-3 col-md-6 col-sm-6">
           <img src="assets/images/2150692407.jpg" alt="Interior Design" class=" custom-img1">
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 mt-5" >
+        <div class="col-lg-3 col-md-6 col-sm-6" >
+          <img src="assets/images/rotateimageclr.png" alt="Logo" class="rotating-image" >
           <img src="assets/images/2151780716.jpg" alt="Interior Design" class=" custom-img1">
         </div>
       </div>
@@ -479,8 +501,7 @@ img {
         <div class="col-lg-6 col-sm-12 aim" >
           <div class="d-flex align-items-center" style="background-color: #f0ecec; padding: 20px; margin-left:0.5ch ;">
             <img src="assets/images/Customization.svg" alt="Icon" style="width: 40px; height: 40px; margin-right: 15px;">
-            <p><span >Our Mission</span><br>To provide top-quality building materials that meet the diverse needs of our customers.
-              To provide top-quality building materials that meet the diverse needs of our customers.
+            <p><span >Our Mission</span><br>To supply premium plywood and hardware, ensuring durability, innovation, and customer satisfaction for builders, contractors, and homeowners alike.
             </p>
           </div>
         </div>
@@ -490,8 +511,7 @@ img {
           <div class="d-flex align-items-center " style="background-color: #f0ecec; padding: 20px; margin-right:0.5ch ;">
             <img src="assets/images/Selection.svg" alt="Icon" style="width: 40px; height: 40px; margin-right: 15px;">
             <p><span>Our Vision</span><br>
-              To provide top-quality building materials that meet the diverse needs of our customers.
-              To provide top-quality building materials that meet the diverse needs of our customers.
+              To be a trusted leader in the plywood and hardware industry, delivering quality products that inspire strength, beauty, and sustainability.
             </p>
           </div>
         </div>
@@ -576,6 +596,7 @@ img {
         <div class="about1st " style="margin-top: 8ch;">
           <div class="row foottext">
           <div class="col-lg-5 col-md-12 col-sm-12">
+            <img src="assets/images/logomain.png" alt="Logo" style="height: 60px; width: 70%; margin-bottom: 1ch;">
             <p>Established in 2011, Sai Krishna Traders is a leading supplier of high-quality building materials,
               including plywood, steel pipes, aluminum, and household hardware. Located in Bhadrak, Odisha,
               we are committed to providing durable and reliable products to meet all your construction needs.</p>
