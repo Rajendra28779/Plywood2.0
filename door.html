@@ -92,20 +92,7 @@
     margin-bottom: 4ch;
     margin-top: 6ch;
   }
-
-  @media (max-width: 768px) {
-  .mapdata{
-    margin: 2ch;
-  }
-
-  .mapdata h4{
-    margin-left: 0;
-  }
-
-  .mapdata p{
-    margin-left: 1ch;
-  }
-}
+ 
 }
 
 .service-item {
@@ -205,6 +192,20 @@
   margin-top: 2ch;
  justify-items: center;
  }
+
+ @media (max-width: 768px) {
+  .mapdata{
+    margin: 2ch;
+  }
+
+  .mapdata h4{
+    margin-left: 0;
+  }
+
+  .mapdata p{
+    margin-left: 1ch;
+  }
+}
 
  .accordion {
     max-width: 650px;
@@ -383,6 +384,21 @@ input[type="radio"]:checked + label span {
     font-size: 18px;
     font-weight: 400;
     justify-content: center;
+}
+
+/* Media query for small devices */
+@media (max-width: 768px) {
+    .heading-bar h2 {
+        font-size: 22px; /* Smaller heading on mobile */
+    }
+
+    .vertical-bar {
+        width: 4px; /* Smaller vertical bar on mobile */
+    }
+
+    .desc p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
 }
   </style>
 
