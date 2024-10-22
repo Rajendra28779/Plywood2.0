@@ -118,7 +118,7 @@ h1, .lead {
   background: url('../images/1000004748.png') no-repeat center center/cover;
    backdrop-filter: blur(2px);
    width: 100vw; /* Full viewport width */
-   height: 45ch; /* Full viewport height */
+   height: 100%; /* Full viewport height */
    background-size: cover; /* Ensures the image covers the entire container */
    background-attachment: fixed; /* Keeps the background fixed as the user scrolls */
    overflow: hidden; /* Ensures no scroll bars appear */
